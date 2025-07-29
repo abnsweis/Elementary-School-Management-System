@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEABAED6-2CC3-43B5-BB52-84E24A7FBFDB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AlShamModelSchool</RootNamespace>
+    <AssemblyName>AlShamModelSchool</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Projects\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Academic Assignment Manager\frmAddTeacherToClassWithSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Academic Assignment Manager\frmAddTeacherToClassWithSubject.Designer.cs">
+      <DependentUpon>frmAddTeacherToClassWithSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\frmAddUpdateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\frmAddUpdateClass.Designer.cs">
+      <DependentUpon>frmAddUpdateClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\frmManageClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\frmManageClasses.Designer.cs">
+      <DependentUpon>frmManageClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ucClassInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\ucClassInfo.Designer.cs">
+      <DependentUpon>ucClassInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsGloble.cs" />
+    <Compile Include="clsUitl.cs" />
+    <Compile Include="clsVerifications.cs" />
+    <Compile Include="Curriculums\frmAddUpdateCurriculum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Curriculums\frmAddUpdateCurriculum.Designer.cs">
+      <DependentUpon>frmAddUpdateCurriculum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curriculums\frmManageCurriculums.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Curriculums\frmManageCurriculums.Designer.cs">
+      <DependentUpon>frmManageCurriculums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageEducationLevels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageEducationLevels.Designer.cs">
+      <DependentUpon>frmManageEducationLevels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradeLevels\frmManageGradeLevels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradeLevels\frmManageGradeLevels.Designer.cs">
+      <DependentUpon>frmManageGradeLevels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parents\frmAddNewPerants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parents\frmAddNewPerants.Designer.cs">
+      <DependentUpon>frmAddNewPerants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parents\frmParentsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parents\frmParentsDetails.Designer.cs">
+      <DependentUpon>frmParentsDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parents\frmParentsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parents\frmParentsList.Designer.cs">
+      <DependentUpon>frmParentsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmAddUpdatePerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmAddUpdatePerson.Designer.cs">
+      <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmManagePeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmManagePeople.Designer.cs">
+      <DependentUpon>frmManagePeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmPersonDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmPersonDetails.Designer.cs">
+      <DependentUpon>frmPersonDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\UserControls\ucPersonInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\UserControls\ucPersonInfo.Designer.cs">
+      <DependentUpon>ucPersonInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\UserControls\ucPersonSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\UserControls\ucPersonSelector.Designer.cs">
+      <DependentUpon>ucPersonSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\UserControls\ucPersonShortInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\UserControls\ucPersonShortInfo.Designer.cs">
+      <DependentUpon>ucPersonShortInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentEnrollment\frmEnrollmentNewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentEnrollment\frmEnrollmentNewStudent.Designer.cs">
+      <DependentUpon>frmEnrollmentNewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentEnrollment\frmManageStudentEnrollment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentEnrollment\frmManageStudentEnrollment.Designer.cs">
+      <DependentUpon>frmManageStudentEnrollment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\frmAddUpdateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\frmAddUpdateStudent.Designer.cs">
+      <DependentUpon>frmAddUpdateStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\frmManageStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\frmManageStudents.Designer.cs">
+      <DependentUpon>frmManageStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\frmStudentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\frmStudentDetails.Designer.cs">
+      <DependentUpon>frmStudentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\UserControls\ucParentsRecourd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Students\UserControls\ucParentsRecourd.Designer.cs">
+      <DependentUpon>ucParentsRecourd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\UserControls\ucParentsSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Students\UserControls\ucParentsSelector.Designer.cs">
+      <DependentUpon>ucParentsSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\UserControls\ucStudentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Students\UserControls\ucStudentInfo.Designer.cs">
+      <DependentUpon>ucStudentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\UserControls\ucStudentSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Students\UserControls\ucStudentSelector.Designer.cs">
+      <DependentUpon>ucStudentSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\frmAddUpdateTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\frmAddUpdateTeacher.Designer.cs">
+      <DependentUpon>frmAddUpdateTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\frmManageTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\frmManageTeachers.Designer.cs">
+      <DependentUpon>frmManageTeachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\frmTeacherDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\frmTeacherDetails.Designer.cs">
+      <DependentUpon>frmTeacherDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\frmTeacherSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\frmTeacherSelector.Designer.cs">
+      <DependentUpon>frmTeacherSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\frmUpdateTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\frmUpdateTeacher.Designer.cs">
+      <DependentUpon>frmUpdateTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\UserControls\ucTeacherShortInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teachers\UserControls\ucTeacherShortInfo.Designer.cs">
+      <DependentUpon>ucTeacherShortInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\UserControls\usTeacherDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teachers\UserControls\usTeacherDetails.Designer.cs">
+      <DependentUpon>usTeacherDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucClassSubjectTeacherSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucClassSubjectTeacherSelector.Designer.cs">
+      <DependentUpon>ucClassSubjectTeacherSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmManageUsers.Designer.cs">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUserDetails.Designer.cs">
+      <DependentUpon>frmUserDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Academic Assignment Manager\frmAddTeacherToClassWithSubject.resx">
+      <DependentUpon>frmAddTeacherToClassWithSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\frmAddUpdateClass.resx">
+      <DependentUpon>frmAddUpdateClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\frmManageClasses.resx">
+      <DependentUpon>frmManageClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\ucClassInfo.resx">
+      <DependentUpon>ucClassInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curriculums\frmAddUpdateCurriculum.resx">
+      <DependentUpon>frmAddUpdateCurriculum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curriculums\frmManageCurriculums.resx">
+      <DependentUpon>frmManageCurriculums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageEducationLevels.resx">
+      <DependentUpon>frmManageEducationLevels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradeLevels\frmManageGradeLevels.resx">
+      <DependentUpon>frmManageGradeLevels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parents\frmAddNewPerants.resx">
+      <DependentUpon>frmAddNewPerants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parents\frmParentsDetails.resx">
+      <DependentUpon>frmParentsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parents\frmParentsList.resx">
+      <DependentUpon>frmParentsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmAddUpdatePerson.resx">
+      <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmManagePeople.resx">
+      <DependentUpon>frmManagePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmPersonDetails.resx">
+      <DependentUpon>frmPersonDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\UserControls\ucPersonInfo.resx">
+      <DependentUpon>ucPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\UserControls\ucPersonSelector.resx">
+      <DependentUpon>ucPersonSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\UserControls\ucPersonShortInfo.resx">
+      <DependentUpon>ucPersonShortInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentEnrollment\frmEnrollmentNewStudent.resx">
+      <DependentUpon>frmEnrollmentNewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentEnrollment\frmManageStudentEnrollment.resx">
+      <DependentUpon>frmManageStudentEnrollment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\frmAddUpdateStudent.resx">
+      <DependentUpon>frmAddUpdateStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\frmManageStudents.resx">
+      <DependentUpon>frmManageStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\frmStudentDetails.resx">
+      <DependentUpon>frmStudentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\UserControls\ucParentsRecourd.resx">
+      <DependentUpon>ucParentsRecourd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\UserControls\ucParentsSelector.resx">
+      <DependentUpon>ucParentsSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\UserControls\ucStudentInfo.resx">
+      <DependentUpon>ucStudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\UserControls\ucStudentSelector.resx">
+      <DependentUpon>ucStudentSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\frmAddUpdateTeacher.resx">
+      <DependentUpon>frmAddUpdateTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\frmManageTeachers.resx">
+      <DependentUpon>frmManageTeachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\frmTeacherDetails.resx">
+      <DependentUpon>frmTeacherDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\frmTeacherSelector.resx">
+      <DependentUpon>frmTeacherSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\frmUpdateTeacher.resx">
+      <DependentUpon>frmUpdateTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\UserControls\ucTeacherShortInfo.resx">
+      <DependentUpon>ucTeacherShortInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\UserControls\usTeacherDetails.resx">
+      <DependentUpon>usTeacherDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucClassSubjectTeacherSelector.resx">
+      <DependentUpon>ucClassSubjectTeacherSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmManageUsers.resx">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUserDetails.resx">
+      <DependentUpon>frmUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{ff10a35f-4fff-41b3-bea0-3d99dae43b50}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addNewPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FemaleIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MakeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addNewPeoples.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdatePerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeletePerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-info-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNewUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Students.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Students1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MalePersonDefaultImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FemalePersonDefaultImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status-update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curriculum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-file-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-binders-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-binders-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-binders-100 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-teaching-english-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-teaching-english-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-teaching-english-100 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-teaching-english-100 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-teaching-english-100 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-student-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-connection-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-connection-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-100 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-teachers-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-teachers-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-turn-on-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-block-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salary-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-male-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-female-user-100.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
